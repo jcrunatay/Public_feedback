@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(41, 50, 65,1);
+    font-family:"Inter",sans-serif;
+
+}
+
+
+/*
+.row{
+    border: 1px solid blue;
+}*/
+
+/*
+    give css styles to the left and right divs
+*/
+
+.leftDiv,.rightDiv{
+    /* border: 1px solid green;*/
+    min-height: 150px;
+    max-height: 800px;
+    margin-top: 5%;
+}
+
+.leftDiv {
+    order: 2;
+}
+
+.rightDiv {
+    order: 1;
+}
+
+
+
+.commentDiv{
+    background-color: rgb(20, 20, 20);
+    padding: 5%;
+    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
+}
+
+/*
+    style rightdiv child
+*/
+
+h1{
+    font-family:"Inter",sans-serif;
+    font-size: 30px;
+}
+
+h1 > span{
+    font-style: italic;
+    color:rgba(74,91,226,1);
+}
+
+/*
+    Form elements
+*/
+
+form textarea{
+    resize: none;
+    margin: auto;
+    background: rgb(200, 200, 200,0.2);
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+form .btn{
+    margin: 5px auto;
+    border-radius: 20px;
+    background: linear-gradient(0deg, rgba(110,121,207,1) 30%, rgba(74,91,226,1) 71%);
+}
+
+form .btn:hover {
+    background: linear-gradient(0deg, rgba(110,121,255,1) 30%, rgba(74,91,255,1) 71%);
+}
+
+.form-valid {
+    box-shadow: 0 0 0 2px #2c8a5e;
+}
+
+.form-invalid {
+    box-shadow: 0 0 0 2px #8a3d2c;
+}
+
+/*
+    Feedback Div
+*/
+.feedbackDiv{
+    max-height: 500px;
+    min-height: 500px;
+    background-color: rgb(235, 235, 235,1);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-family: "Roboto",sans-serif;
+    /*transition: all 1.5s linear;*/
+    overflow-y: auto;
+
+}
+
+.feedbackDiv::-webkit-scrollbar,
+ .leftDiv::-webkit-scrollbar{
+    width: 5px;             /* width of the entire scrollbar */
+}
+
+.feedbackDiv::-webkit-scrollbar-thumb,
+.leftDiv::-webkit-scrollbar-thumb {
+    background-color:  rgb(88, 90, 92,0.5);    /* color of the scroll thumb */
+    border-radius: 5px;       /* roundness of the scroll thumb */
+}
+
+/*
+    Feedback 3 columns
+*/
+
+/*
+.feedbackDiv .fback-col{
+    /* border: 1px solid red; 
+}
+*/
+
+.fback-col .fback_text,.fback-col .fback_company{
+    /*border: 1px solid red;*/
+    margin: 4px;
+    font-size: 14px;
+}
+
+.feedback{
+    border-bottom: 1px solid rgb(211,211,211,0.5);
+    overflow: hidden;
+    padding-top: 10px;
+    text-align: justify;    
+}
+
+.feedback:hover .fback_badgeParent,
+.feedback:hover .fback_content{
+    transform: translateX(5px);
+    cursor:pointer;
+}
+
+.feedback:hover{
+    background-color :rgb(255, 255, 255,1);
+}
+
+.fback-col1,.fback-col2{
+    display: flex;
+    justify-content: center;
+}
+
+.fback-col{
+    height: 70px;
+    transition: all 1s ease;
+}
+
+
+.fback-col1 button{
+    width: 50px;
+    height: 50px;
+}
+
+.fback-col1 button span{
+    font-size: 12px;
+}
+
+
+
+.fback-col1 button:hover{
+    background-color:  rgb(144, 144, 144,0.2);
+}
+
+
+.fback-col2 .badgge{
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/*
+    LeftDIv 
+*/
+
+.leftDiv {
+    overflow-y: auto;
+}
+
+
+
+.leftDiv ul{
+    list-style: none;
+}
+
+.leftDiv ul li button{
+    background-color:  rgb(255, 255, 255,0.2);
+    padding: 5px 20px;
+    border-radius: 30px;
+    color: rgb(211,211,211,0.5);
+    border: none;
+    margin: 10px;
+    font-family: "Roboto",sans-serif;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.leftDiv ul li button:hover{
+    color: rgb(255,255,255,1);
+    padding: 10px 30px;
+    font-size: 18px ;
+}
+
+.leftDiv ul li button:focus{
+    color: rgb(255,255,255,1);
+
+}

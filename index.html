@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Feedback Publicly</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f8758f5827.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+    <!--somison653@bitvoo.com-->
+    <!--risingsun1234-->
+</head>
+<body>
+    <div class="container">
+        <div class="row  justify-content-center ">
+            <div class="col-sm-12 col-md-4 columns leftDiv">
+                <ul class="list-wrapper">
+                    <li><button class="showAll bg-primary">#All Feedback</button></li>
+                    <!--li><button>#Amazon</button></li>
+                    <li><button>#Adidas</button></li>
+                    <li><button>#Netflix</button></li>
+                    <li><button>#Microsoft</button></li>
+                    <li><button>#Mcdonald's</button></li-->
+
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-6 columns rightDiv">
+                <div class="commentDiv px-3">
+                <h1 class="text-center text-white">Give Feedback.<span> Publicly</span></h1>
+                <form role="form" name="feedback_form" class="form">
+                    <textarea required minlength ="5" maxlength="150 name="insert-feedback" id="insert-feedback" rows="4" placeholder="Enter your feedback here, remember to #hashtag the company"></textarea>
+                    <div class="alert alert-danger text-center d-none" role="alert">
+                        <i class="fa-solid fa-circle-exclamation"></i> A simple danger alert—check it out!
+                    </div>
+                    <button type="submit" id="submit" class="btn"><i class="fa-solid fa-paper-plane text-white"></i> Submit</button>
+                </form>
+                </div>
+                <div class="feedbackDiv container overflowy-auto">
+                    <div class="feedback feedback1 row">
+                        <!-- Caret and votes-->
+                        <!-- <div class="col-12 col-md-12 col-lg-2 fback-col fback-col1">
+                            <button class="btn upVoteParent ">
+                                <i class="fa-solid fa-caret-up d-block"></i>
+                                <span class="upVote">189</span>
+                            </button>
+                        </div> -->
+                        <!-- Feedback badge -->
+                        <!-- <div class=" col-2 col-md-2 col-lg-2  fback-col fback-col2 pt-2 fback_badgeParent">   
+                            <p class=" badgge bg-info fs-2 d-flex justify-content-center align-items-center">B</p>
+                        </div> -->
+
+                        <!-- Feedback Content -->
+                    <!--   <div class="col-10 col-md-10  col-lg-8  fback-col  fback-col3 fback_content">
+                            <p class="fback_company">bernardcompany</p>
+                            <p class="fback_text">hi #bernardcompany i like your clothes but not the website, please improve itasdasdasasdasddasaa aaaaaaaaaaaaa aaa aaaaaaa aaaaaaa aaaaaaaaaaa aaaaaaaaa
+                            </p>
+                        </div>   -->        
+                    </div>    
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
