@@ -3,6 +3,5 @@ Users can insert a feedback by using hastag to refer to the company e.g(#Tim's) 
 
 Technologies used in the projects
 • HTML
-• CSS
 • JAVASCRIPT
 • BOOTSTRAP
