@@ -137,45 +137,6 @@ function displayFeedback(arr){
 
 
 
-
-/*
-    Set css transition on a selected feedback 
-*/
-
-/* function setTransition(){
-    const getAllfeedback = document.getElementsByClassName("feedback");
-    for(let i = 0 ; i < getAllfeedback.length ; i++){
-        getAllfeedback[i].addEventListener('mouseover',function(){
-            getAllfeedback[i].style.backgroundColor = "rgb(255, 255, 255,1)";
-            getAllfeedback[i].style.cursor = "pointer";
-            getAllfeedback[i].style.transition = "all 0.2s linear 0.1s";
-            getAllfeedback[i].style.paddingLeft = "2px";
-        });
-    }
-} */
-
-/*
-    unSet css transition on a selected feedback 
-*/
-
-/* function unsetTransition(){
-    const getAllfeedback = document.getElementsByClassName("feedback");
-    for(let i = 0 ; i < getAllfeedback.length ; i++){
-        getAllfeedback[i].addEventListener('mouseout',function(){
-            getAllfeedback[i].style.paddingLeft = "unset";
-            getAllfeedback[i].style.backgroundColor = "unset";
-            getAllfeedback[i].style.cursor = "unset";
-        });
-    }
-} */
-
-
-/* 
-
-    when feedback text is click it should show the whole text
-
-*/
-
 function showWholeFeedbackText(){
 
     //column where text and company name are
@@ -301,7 +262,6 @@ function upVote(){
 
 function addNewFeedback(){
 
-    const submitButton = document.getElementById("submit");
     const textArea = document.querySelector("#insert-feedback");
 
     //get the hashtag
@@ -313,7 +273,7 @@ function addNewFeedback(){
 
         let splitText = textArea.value.split(" ");
         let getCompanyName = splitText.filter(word => word[0] == "#");
-        console.log(getCompanyName.length)
+
             if(getCompanyName.length == 1 && getCompanyName.toString().length >= 5){
                 newFeedback['company'] = getCompanyName.toString().replace("#","");
                 newFeedback['badgeLetter'] = newFeedback['company'][0].toUpperCase();

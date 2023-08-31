@@ -18,60 +18,80 @@
     <!--somison653@bitvoo.com-->
     <!--risingsun1234-->
 </head>
-<body>
+<body class="px-3">
+
+    <!-- Modal -->
+    <div class="modal fade " id="filter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog d-flex justify-content-center">
+            <div class="modal-content bg-dark">
+                <div class="columns leftDiv bg-dark">
+                    <ul class="list-wrapper p-0">
+                        <li><button class="company_button company--active">#Feedback</button></li>
+                        <!-- <li><button class ="company_button">#Amazon</button></li>
+                        <li><button class ="company_button">#Adidas</button></li>
+                        <li><button class ="company_button">#Netflix</button></li>
+                        <li><button class ="company_button">#Microsoft</button></li>
+                        <li><button class ="company_button">#Mcdonald's</button></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row  justify-content-center ">
-            <div class="col-sm-12 col-md-4 columns leftDiv">
-                <ul class="list-wrapper">
-                    <li><button class="showAll bg-primary">#All Feedback</button></li>
-                    <!--li><button>#Amazon</button></li>
-                    <li><button>#Adidas</button></li>
-                    <li><button>#Netflix</button></li>
-                    <li><button>#Microsoft</button></li>
-                    <li><button>#Mcdonald's</button></li-->
+            <div class="col-sm-12 col-md-3 col-lg-4 columns leftDiv" id="leftDiv1">
+                <ul class="list-wrapper p-0">
+                    <li><button class="company_button company--active">#Feedback</button></li>
+                    <!-- <li><button class ="company_button">#Amazon</button></li>
+                    <li><button class ="company_button">#Adidas</button></li>
+                    <li><button class ="company_button">#Netflix</button></li>
+                    <li><button class ="company_button">#Microsoft</button></li>
+                    <li><button class ="company_button">#Mcdonald's</button></li> -->
 
                 </ul>
             </div>
-            <div class="col-sm-12 col-md-6 columns rightDiv">
+            <div class="col-sm-12 col-md-9 col-lg-6  columns rightDiv px-0">
                 <div class="commentDiv px-3">
-                <h1 class="text-center text-white">Give Feedback.<span> Publicly</span></h1>
-                <form role="form" name="feedback_form" class="form">
-                    <textarea required minlength ="5" maxlength="150 name="insert-feedback" id="insert-feedback" rows="4" placeholder="Enter your feedback here, remember to #hashtag the company"></textarea>
-                    <div class="alert alert-danger text-center d-none" role="alert">
-                        <i class="fa-solid fa-circle-exclamation"></i> A simple danger alert—check it out!
-                    </div>
-                    <button type="submit" id="submit" class="btn"><i class="fa-solid fa-paper-plane text-white"></i> Submit</button>
-                </form>
+                    <h1 class="text-center text-white">Give Feedback.<span> Publicly</span></h1>
+                    <form role="form" name="feedback_form" class="form">
+                        <textarea required minlength ="5" maxlength="150 name="insert-feedback" id="insert-feedback" rows="4" placeholder="Enter your feedback here, remember to #hashtag the company"></textarea>
+                        <div class="alert alert-danger text-center d-none" role="alert">
+                            <i class="fa-solid fa-circle-exclamation"></i> A simple danger alert—check it out!
+                        </div>
+                        <button type="button" id="submit" class="btn"><i class="fa-solid fa-paper-plane text-white"></i> Submit</button>
+                        <svg  data-bs-toggle="modal" data-bs-target="#filter" class="menu float-end mt-2 me-2" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#4a5be2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#4a5be2" stroke-width="2" stroke-linecap="round"></path> <path d="M4 12L20 12" stroke="#4a5be2" stroke-width="2" stroke-linecap="round"></path> <path d="M4 6L20 6" stroke="#4a5be2" stroke-width="2" stroke-linecap="round"></path> </g></svg>
+                    </form>
                 </div>
                 <div class="feedbackDiv container overflowy-auto">
+                    <div class="spinner-wrapper">
+                        <div class="spinner-border my-spinner" role="status">
+                        </div>
+                    </div>
                     <div class="feedback feedback1 row">
                         <!-- Caret and votes-->
-                        <!-- <div class="col-12 col-md-12 col-lg-2 fback-col fback-col1">
-                            <button class="btn upVoteParent ">
+                        <!-- <div class="col-auto col-md-2 fback-col fback-col1 pt-2">
+                            <button class="btn upVoteParent">
                                 <i class="fa-solid fa-caret-up d-block"></i>
                                 <span class="upVote">189</span>
                             </button>
                         </div> -->
                         <!-- Feedback badge -->
-                        <!-- <div class=" col-2 col-md-2 col-lg-2  fback-col fback-col2 pt-2 fback_badgeParent">   
+                        <!-- <div class="col-auto col-md-2 fback-col fback-col2 pt-3 fback_badgeParent border">   
                             <p class=" badgge bg-info fs-2 d-flex justify-content-center align-items-center">B</p>
                         </div> -->
 
                         <!-- Feedback Content -->
-                    <!--   <div class="col-10 col-md-10  col-lg-8  fback-col  fback-col3 fback_content">
+                        <!-- <div class="col col-md-8 fback-col  fback-col3 fback_content border">
                             <p class="fback_company">bernardcompany</p>
                             <p class="fback_text">hi #bernardcompany i like your clothes but not the website, please improve itasdasdasasdasddasaa aaaaaaaaaaaaa aaa aaaaaaa aaaaaaa aaaaaaaaaaa aaaaaaaaa
                             </p>
-                        </div>   -->        
+                        </div>  -->         
                     </div>    
-                    
                 </div>
-                
                 
             </div>
         </div>
     </div>
-
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

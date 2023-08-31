@@ -12,11 +12,6 @@ body{
 
 
 /*
-.row{
-    border: 1px solid blue;
-}*/
-
-/*
     give css styles to the left and right divs
 */
 
@@ -29,10 +24,26 @@ body{
 
 .leftDiv {
     order: 2;
+    max-height: 600px;
+
+}
+
+.modal-content{
+    margin-top: 20%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .rightDiv {
     order: 1;
+    box-shadow: 0 0 2px 2px rgba(74,91,226,0.3);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.leftDiv2{
+    z-index: 100;
+    border-radius: 10px;
 }
 
 
@@ -43,6 +54,8 @@ body{
     border-top-left-radius:10px ;
     border-top-right-radius: 10px;
 }
+
+
 
 /*
     style rightdiv child
@@ -93,6 +106,15 @@ form .btn:hover {
     box-shadow: 0 0 0 2px #8a3d2c;
 }
 
+.menu{
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: none;
+}
+
+.menu:active{
+    transform: scale(1.2);
+}
 /*
     Feedback Div
 */
@@ -105,7 +127,7 @@ form .btn:hover {
     font-family: "Roboto",sans-serif;
     /*transition: all 1.5s linear;*/
     overflow-y: auto;
-
+    position: relative;
 }
 
 .feedbackDiv::-webkit-scrollbar,
@@ -115,19 +137,30 @@ form .btn:hover {
 
 .feedbackDiv::-webkit-scrollbar-thumb,
 .leftDiv::-webkit-scrollbar-thumb {
-    background-color:  rgb(88, 90, 92,0.5);    /* color of the scroll thumb */
-    border-radius: 5px;       /* roundness of the scroll thumb */
+    background-color:  rgba(74,91,226,0.7);    /* color of the scroll thumb */
+    border-radius: 7px;       /* roundness of the scroll thumb */
+    
 }
 
 /*
     Feedback 3 columns
 */
 
-/*
-.feedbackDiv .fback-col{
-    /* border: 1px solid red; 
+.feedbackDiv .spinner-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
-*/
+
+.spinner-wrapper .my-spinner{
+    width: 80px;
+    height: 80px;
+    color: rgba(74,91,226,0.7);
+    font-size: 2rem;
+}
+
+
 
 .fback-col .fback_text,.fback-col .fback_company{
     /*border: 1px solid red;*/
@@ -152,27 +185,37 @@ form .btn:hover {
     background-color :rgb(255, 255, 255,1);
 }
 
+
 .fback-col1,.fback-col2{
     display: flex;
     justify-content: center;
 }
 
+
+
 .fback-col{
-    height: 70px;
     transition: all 1s ease;
 }
 
 
+.fback-col3{
+    height: 70px;
+    overflow: hidden;
+
+}
+
 .fback-col1 button{
     width: 50px;
     height: 50px;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: none;
 }
 
 .fback-col1 button span{
     font-size: 12px;
 }
-
-
 
 .fback-col1 button:hover{
     background-color:  rgb(144, 144, 144,0.2);
@@ -197,7 +240,6 @@ form .btn:hover {
 }
 
 
-
 .leftDiv ul{
     list-style: none;
 }
@@ -206,21 +248,82 @@ form .btn:hover {
     background-color:  rgb(255, 255, 255,0.2);
     padding: 5px 20px;
     border-radius: 30px;
-    color: rgb(211,211,211,0.5);
+    color: rgb(211,211,211,0.8);
     border: none;
     margin: 10px;
     font-family: "Roboto",sans-serif;
     letter-spacing: 1.5px;
     transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    cursor: pointer;
 }
 
-.leftDiv ul li button:hover{
+ .leftDiv ul li button:hover{
     color: rgb(255,255,255,1);
-    padding: 10px 30px;
-    font-size: 18px ;
-}
+    transform: scale(1.2);
+    cursor: pointer;
+} 
 
 .leftDiv ul li button:focus{
     color: rgb(255,255,255,1);
 
 }
+
+.company--active{
+    background: linear-gradient(0deg, rgba(110,121,207,1) 30%, rgba(74,91,226,1) 71%);
+}
+
+
+
+@media screen and (max-width: 767px){
+    
+    #leftDiv1{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    h1{
+        font-size: 25px;
+    }
+
+    form textarea,form .btn{
+        font-size: 14px;
+    }
+
+    .fback-col2 .badgge{
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .fback-col .fback_text,.fback-col .fback_company{
+        /*border: 1px solid red;*/
+        margin: 4px;
+        font-size: 12px;
+    }
+
+    .fback-col3{
+        height: 60px;
+    }
+
+    .feedbackDiv{
+        max-height: 400px;
+        min-height: 400px;
+    }
+
+    .leftDiv{
+        max-height: 500px;
+    }
+
+    .modal-content{
+        width: 90%;
+    }
+
+}
+
